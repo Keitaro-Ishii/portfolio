@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>イシイケイタロウ｜ポートフォリオ</title>
+  <meta name="description" content="webデザイナーのイシイケイタロウのポートフォリオです。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/pnj2gna.css">
+</head>
+
+<body>
+   <div class="bg">
+    <div class="noise"></div>
+  </div>
+
+  <header>
+    <div class="header-container">
+
+      <div class="header-logo">
+        <a href="#">
+          <img src="img/logo.svg" alt="logo">
+        </a>
+      </div>
+      <ul class="header-menu">
+        <li><a class="header-menu__list" href="">WORKS</a></li>
+        <li><a class="header-menu__list" href="">PROFILE</a></li>
+        <li><a class="header-menu__list" href="">NOTE</a></li>
+        <li><a class="header-menu__list last" a href="mailto:keitaro0541@icloud.com" target="_blank"><img src="img/mail.svg">keitaro0514@icloud.com</a></li>
+      </ul>
+
+      <div class="menu-icon">
+        <span class="bar"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </div>
+    </div>
+
+    <nav class="sp-menu">
+      <ul class="sp-menu_list">
+        <li><a class="sp-menu_list--link" href="">WORKS<span> / 作品一覧</span></a></li>
+        <li><a class="sp-menu_list--link" href="">PROFILE<span> / プロフィール</span></a></li>
+        <li><a class="sp-menu_list--link" href="">NOTE<span> / 仕事と日常のこと</span></a></li>
+      </ul>
+      <a class="sp-menu_list--link mail" href="mailto:keitaro0514@icloud.com" target="_blank"><img src="img/mail.svg">keitaro0514@icloud.com</a>
+    </nav>
+
+  </header>
+
+  <section class="sect">
+    <div class="container note-detail-container">
+
+      <span class="note-detail_date">2025.01.02</span>
+      <div class="note-detail_title--container">
+        <h1 class="note-detail_title">
+          2たまご話
+        </h1>
+        <span class="note-item_link--label">日常のこと</span>
+      </div>
+
+      <p>
+        人生で初めて1個の卵から2個の黄身がでてきました。
+      </p>
+
+      <div class="note-detail_img--container">
+        <img src="img/note-thumb-2.jpg">
+      </div>
+
+      <p>
+        一富士二卵三茄子。
+      </p>
+  
+    </div>
+  </section>
+
+  <footer>
+    <small>@ ishii keitaro Portfolio</small>
+  </footer>
+
+
+<script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const spMenu = document.querySelector('.sp-menu');
+
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('is-active');
+    spMenu.classList.toggle('is-active');
+  });
+</script>
+
+
+</body>
+</html>

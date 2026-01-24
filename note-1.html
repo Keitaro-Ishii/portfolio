@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>イシイケイタロウ｜ポートフォリオ</title>
+  <meta name="description" content="webデザイナーのイシイケイタロウのポートフォリオです。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/pnj2gna.css">
+</head>
+
+<body>
+   <div class="bg">
+    <div class="noise"></div>
+  </div>
+
+  <header>
+    <div class="header-container">
+
+      <div class="header-logo">
+        <a href="#">
+          <img src="img/logo.svg" alt="logo">
+        </a>
+      </div>
+      <ul class="header-menu">
+        <li><a class="header-menu__list" href="">WORKS</a></li>
+        <li><a class="header-menu__list" href="">PROFILE</a></li>
+        <li><a class="header-menu__list" href="">NOTE</a></li>
+        <li><a class="header-menu__list last" a href="mailto:keitaro0541@icloud.com" target="_blank"><img src="img/mail.svg">keitaro0514@icloud.com</a></li>
+      </ul>
+
+      <div class="menu-icon">
+        <span class="bar"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </div>
+    </div>
+
+    <nav class="sp-menu">
+      <ul class="sp-menu_list">
+        <li><a class="sp-menu_list--link" href="">WORKS<span> / 作品一覧</span></a></li>
+        <li><a class="sp-menu_list--link" href="">PROFILE<span> / プロフィール</span></a></li>
+        <li><a class="sp-menu_list--link" href="">NOTE<span> / 仕事と日常のこと</span></a></li>
+      </ul>
+      <a class="sp-menu_list--link mail" href="mailto:keitaro0514@icloud.com" target="_blank"><img src="img/mail.svg">keitaro0514@icloud.com</a>
+    </nav>
+
+  </header>
+
+  <section class="sect">
+    <div class="container note-detail-container">
+
+      <span class="note-detail_date">2025.12.27</span>
+      <div class="note-detail_title--container">
+        <h1 class="note-detail_title">
+          初めてサービスを作った話
+        </h1>
+        <span class="note-item_link--label">仕事のこと</span>
+      </div>
+
+      <p>
+        デザイナーとして入社して、2年半にして初めて新規サービスのデザインを担当しました。<br>
+        サービス名は「90KU-KAN」。<br>
+        創作プラットフォームとしてクリエイターを支援する仕組みが組み込まれています。<br>
+        2025年の2月からデザインに着手し、8月に正式オープンとなりました。
+      </p>
+
+      <div class="note-detail_img--container">
+        <img src="img/note-thumb-1.jpg">
+      </div>
+
+      <p>
+        ここまで大きな仕事をするのが初めてで、何から手を付けてよいのか全く分からず、デザインチームとしても段取りのノウハウが確立していない状態で、 ここの機能はもっとこうした方がいいんじゃないかと提案したり、エンジニアさんとディレクターさんと連携を取り合いながらなんとか走り抜けることができました。
+      </p>
+
+      <p>
+        この仕事で一番大変だったことは、各チーム間での
+      </p>
+
+      <div class="note-detail_img--container">
+        <img src="img/note-article1-1.jpg">
+      </div>
+
+
+      <p>
+        自分が手がけたページの中でも特にお気に入りなのがステッキ―一覧ページ。<br>
+        コミティアとか、デザフェスのたくさんのステッカーの中から気に入ったものを選ぶ時のあのわくわく感があってすきです。
+      </p>
+  
+    </div>
+  </section>
+
+  <footer>
+    <small>@ ishii keitaro Portfolio</small>
+  </footer>
+
+
+<script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const spMenu = document.querySelector('.sp-menu');
+
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('is-active');
+    spMenu.classList.toggle('is-active');
+  });
+</script>
+
+
+</body>
+</html>

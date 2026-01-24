@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>イシイケイタロウ｜ポートフォリオ</title>
+  <meta name="description" content="このページの概要説明です。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="bg">
+    <div class="noise"></div>
+  </div>
+
+  <header>
+    <div class="header-container">
+
+      <div class="header-logo">
+        <a href="#">
+          <img src="img/logo.svg" alt="logo">
+        </a>
+      </div>
+      <ul class="header-menu">
+        <li><a class="header-menu__list" href="">WORKS</a></li>
+        <li><a class="header-menu__list" href="">PROFILE</a></li>
+        <li><a class="header-menu__list" href="">NOTE</a></li>
+        <li><a class="header-menu__list last" a href="mailto:keitaro0541@icloud.com" target="_blank"><img src="img/mail.svg">keitaro0514@icloud.com</a></li>
+      </ul>
+
+      <div class="menu-icon">
+        <span class="bar"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </div>
+    </div>
+
+    <nav class="sp-menu">
+      <ul class="sp-menu_list">
+        <li><a class="sp-menu_list--link" href="">WORKS<span> / 作品一覧</span></a></li>
+        <li><a class="sp-menu_list--link" href="">PROFILE<span> / プロフィール</span></a></li>
+        <li><a class="sp-menu_list--link" href="">NOTE<span> / 仕事と日常のこと</span></a></li>
+      </ul>
+      <a class="sp-menu_list--link mail" href="mailto:keitaro0514@icloud.com" target="_blank"><img src="img/mail.svg">keitaro0514@icloud.com</a>
+    </nav>
+
+  </header>
+
+
+  <div class="container work-container">
+    <div class="work-info">
+      <ul class="bread">
+        <li><a href="">HOME</a></li>
+        <li class="bread-gray">></li>
+        <li><a href="">WORKS</a></li>
+        <li class="bread-gray">></li>
+        <li>自社採用LP</li>
+      </ul>
+      <div class="work-explain">
+        <div class="work-works-typo__container">
+          <img class="works-typo" src="img/WORKS.svg">
+        </div>
+        <h1 class="work-explain__title">自社自社採用LP</h1>
+        <p class="work-explain__text">
+          自社の採用ページのLPのコーディングを担当しました。
+        </p>
+      </div>
+      <hr>
+      <div class="work-subexplain">
+
+        <table>
+          <tbody>
+            <tr>
+              <th>Year</th>
+              <td>2024</td>
+            </tr>
+            
+            <tr>
+              <th>URL</th>
+              <td><a class="bold" href="https://skima.jp/landing/recruit" target="_blank">https://skima.jp/landing/recruit</a></td>
+            </tr>
+            
+            <tr>
+              <th>担当領域</th>
+              <td>HTML / CSS / JavaScriptによる静的コーディング、レスポンシブ対応、軽微なアニメーション実装</td>
+            </tr>
+            
+            <tr>
+              <th>製作期間</th>
+              <td>1.5日</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="sp-none">
+      <div class="work-back">
+        <a href="" class="btn">ページのTOPに戻る</a>
+      </div>
+
+    </div>
+    <div class="work-img">
+      <img src="img/work02.png">
+    </div>
+  </div>
+
+  <footer>
+    <small>@ ishii keitaro Portfolio</small>
+  </footer>
+
+<script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const spMenu = document.querySelector('.sp-menu');
+
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('is-active');
+    spMenu.classList.toggle('is-active');
+  });
+</script>
+
+
+</body>
+</html>
