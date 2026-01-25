@@ -19,25 +19,28 @@ a {
     color: #0655af;
     text-decoration: underline;
     text-underline-offset: 1px;
-    transition: 0.5s all ease;
+    transition: 0.3s all ease;
 }
 
 .btn {
-    display: flex;
+     display: flex;
     align-items: center;
     width: fit-content;
-    padding: 6px 15px;
-    background-color: #d0ee35;
-    border: 1px solid #0C0D0D;
-    color: #0C0D0D;
+    padding: 6px 12px;
+    background-color: #0c0d0d;
+    border: 1px solid transparent;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 100px;
     font-size: 14px;
     font-weight: bold;
+    transition: 0.3s all ease;
 }
 
 .btn img {
-    margin-left: 2px;
+    margin-left: 3px;
+    filter: brightness(0) invert(1);
+    transition: 0.3s all ease;
 }
 
 p {
@@ -129,6 +132,18 @@ position: absolute;
     transform: translateY(1px);
 }
 
+@media(hover: hover) {
+    .btn:hover {
+        color: #0C0D0D;
+        border: 1px solid #0C0D0D;
+        background-color: #E4E6E7;
+        opacity: 1;
+    }
+    .btn:hover img {
+        filter: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .sect {
         margin: 15px 0;
@@ -151,7 +166,6 @@ position: absolute;
     p {
         font-size: 14px;
     }
-
 }
 
 /* .bg {
@@ -419,11 +433,11 @@ header {
 }
 
 .works-label .blue {
-    background-color: #0C0D0D;
+    background-color: #2773e7;
 }
 
 .works-label .red {
-    background-color: #0C0D0D;
+    background-color: #c3469c;
 }
 
 .works-name {
@@ -571,6 +585,7 @@ header {
     }
     .profile-logo {
         max-width: 250px;
+        margin: 5px 0 15px;
     }
     .profile-slider img {
         width: 200px;
@@ -803,6 +818,7 @@ dd {
     color: #0C0D0D;
     text-decoration: none;
     padding: 10px 15px;
+    transition: 0.3s all ease;
 }
 
 .note-item_link--info {
@@ -848,9 +864,19 @@ dd {
 }
 @media (hover: hover) {
     .note-item_link:hover {
-        background-color: #d0ee35;
+        background-color: #0c0d0d;
         opacity: 1;
     }
+
+    .note-item_link:hover .note-item_link--info_number {
+        background-color: #E4E6E7;
+        color: #0C0D0D;
+    }
+
+    .note-item_link:hover .note-item_link--info_title {
+        color: #E4E6E7;
+    }
+
 }
 @media screen and (max-width: 768px) {
     .note-container {
@@ -867,7 +893,9 @@ dd {
     .note-item_link--info {
         gap: 10px;
     }
-    .note-detail_date {
+    .note-item_link--info_number {
+        width: 21px;
+        height: 21px;
         font-size: 12px;
     }
     .note-item_link--label {
@@ -926,6 +954,17 @@ dd {
     .note-detail_title--container {
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    .note-detail_img--container {
+        max-width: 350px;
+    }
+    .note-detail-container p {
+        margin: 10px 0;
+    }
+    .note-detail_date {
+        font-size: 12px;
+        margin-bottom: 10px;
     }
 }
 
