@@ -16,7 +16,7 @@ h1,h2,h3 {
 }
 
 a {
-    color: #d1813a;
+    color: #e5822a;
     text-decoration: underline;
     text-underline-offset: 1px;
     transition: 0.3s all ease;
@@ -27,7 +27,7 @@ a {
     align-items: center;
     width: fit-content;
     padding: 6px 12px;
-    background-color: #d1813a;
+    background-color: #e5822a;
     border: 1px solid transparent;
     color: #f8fdf4;
     text-decoration: none;
