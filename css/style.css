@@ -4,8 +4,8 @@ html {
 }
 
 body {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 400;
+font-family: "hiragino-mincho-pron", sans-serif;    
+font-weight: 400;
     font-style: normal;
     background-color: #ffffff;
     color: #061138;
@@ -87,7 +87,7 @@ position: absolute;
 
 .sect-title span {
     display: inline-block;
-    background-color: #f8fdf4;
+    background-color: #fff;
     padding: 0 30px 0 0;
 }
 
@@ -269,9 +269,6 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
     top: 6px;
 }
 
-.menu-icon.is-active .bar {
-  background-color: #f8fdf4;
-}
 
 .menu-icon.is-active .bar2 {
   opacity: 0;
@@ -292,7 +289,7 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
 
 .sp-menu {
     background-color: #061138;
-    margin-top: 45px;
+    margin-top: 49.39px;
     padding: 50px 15px;    
     z-index: 3;
     height: 100dvh;
@@ -849,7 +846,7 @@ dd {
     border: 1px solid #919191;
     border-radius: 100px;
     line-height: 1;
-    font-size: 13px;
+    font-size: 12px;
     flex-shrink: 0;
 }
 @media (hover: hover) {
