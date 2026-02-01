@@ -84,17 +84,23 @@
     <small>@ ishii keitaro Portfolio</small>
   </footer>
 
-
 <script>
   const menuIcon = document.querySelector('.menu-icon');
   const spMenu = document.querySelector('.sp-menu');
+  const spMenuLinks = document.querySelectorAll('.sp-menu_list--link');
 
   menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('is-active');
     spMenu.classList.toggle('is-active');
   });
-</script>
 
+  spMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuIcon.classList.remove('is-active');
+      spMenu.classList.remove('is-active');
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -22,6 +22,10 @@ a {
     transition: 0.3s all ease;
 }
 
+.anchor-position {
+  scroll-margin-top: 100px; /* ヘッダー分 + 少し余裕 */
+}
+
 .btn {
      display: flex;
     align-items: center;
@@ -146,6 +150,9 @@ position: absolute;
 }
 
 @media screen and (max-width: 768px) {
+    .anchor-position {
+        scroll-margin-top: 60px;
+    }
     .sect {
         margin: 15px 0;
     }
@@ -322,18 +329,21 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
     text-decoration: none;
     font-size: 35px;
     font-weight: bold;
+    font-style: italic;
 }
 
 .sp-menu_list--link span {
     font-weight: normal;
     font-size: 14px;
     margin-left: 3px;
+    font-style: normal;
 }
 
 .sp-menu_list--link.mail {
     font-size: 14px;
     font-weight: normal;
     text-decoration: underline;
+    font-style: normal;
 }
 
 .sp-menu_list--link.mail img {

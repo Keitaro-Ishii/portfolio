@@ -57,7 +57,7 @@
   <section class="sect">
     <div class="container">
 
-      <h1 id="work" class="sect-title"><span>WORKS</span></h1>
+      <h1 id="work" class="sect-title anchor-position"><span>WORKS</span></h1>
       <span class="sect-title__sub">制作一覧</span>
 
       <div class="works-container">
@@ -152,7 +152,7 @@
         </ul>
       </div>
       
-      <h1 id="profile" class="sect-title"><span>PROFILE</span></h1>
+      <h1 id="profile" class="sect-title anchor-position"><span>PROFILE</span></h1>
       <span class="sect-title__sub">プロフィール</span>
 
       <div class="profile-info-container">
@@ -206,7 +206,7 @@
 
   <section class="sect">
     <div class="container">
-      <h1 id="note" class="sect-title"><span>NOTE</span></h1>
+      <h1 id="note" class="sect-title anchor-position"><span>NOTE</span></h1>
       <span class="sect-title__sub">仕事と日常のこと</span>
       <ul class="note-container">
         <li class="note-item">
@@ -243,17 +243,23 @@
     <small>@ ishii keitaro Portfolio</small>
   </footer>
 
-
 <script>
   const menuIcon = document.querySelector('.menu-icon');
   const spMenu = document.querySelector('.sp-menu');
+  const spMenuLinks = document.querySelectorAll('.sp-menu_list--link');
 
   menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('is-active');
     spMenu.classList.toggle('is-active');
   });
-</script>
 
+  spMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuIcon.classList.remove('is-active');
+      spMenu.classList.remove('is-active');
+    });
+  });
+</script>
 
 </body>
 </html>
