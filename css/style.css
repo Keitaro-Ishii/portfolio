@@ -501,7 +501,7 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
 .profile-info-container {
     display: flex;
     gap: 20px;
-    margin: 20px 0;
+    margin: 20px 0 10px;
 }
 
 .profile-img {
@@ -524,7 +524,7 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
 }
 
 .triangle-wrap {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
 }
 
@@ -595,6 +595,9 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
 }
 
 @media screen and (max-width: 768px) {
+    .profile-slider-wrap {
+        margin-bottom: 10px;
+    }
     .profile {
         margin: 10px 0;
     }
@@ -619,6 +622,7 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
 
     .profile-skills li {
         width: 100%;
+        line-height: 1.4;
     }
 
     .profile-logo {
