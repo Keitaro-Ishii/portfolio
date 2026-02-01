@@ -592,6 +592,10 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
         flex-shrink: 0;
     }
 
+    .profile-skills li {
+        width: 100%;
+    }
+
     .profile-logo {
         max-width: 250px;
         margin: 5px 0 15px;
@@ -779,6 +783,7 @@ dd {
 @media screen and (max-width: 768px) {
     .bread {
         padding: 12px 10px;
+        font-size: 11px;
     }
     .work-works-typo__container .works-typo {
         margin-bottom: 15px;
