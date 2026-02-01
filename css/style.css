@@ -512,14 +512,28 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
     margin-bottom: 20px;
 }
 
+.triangle-wrap {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
 .profile-skills {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 13px;
-    gap: 8px 16px;
+    gap: 5px 16px;
+    margin: 0 1em;
 }
 
+.triangle-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.triangle-down {
+    display: inline-block;
+    width: 20px;
+}
 .profile-skills li {
     color: #061138;
     font-size: 13px;
