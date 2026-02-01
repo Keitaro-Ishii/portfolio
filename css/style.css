@@ -4,7 +4,7 @@ html {
 }
 
 body {
-font-family: "hiragino-mincho-pron", sans-serif;    
+font-family: "Noto Sans JP", sans-serif;    
 font-weight: 400;
     font-style: normal;
     background-color: #ffffff;
@@ -165,7 +165,7 @@ position: absolute;
     }
     p {
         font-size: 14px;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.03rem;
     }
 }
 
@@ -355,7 +355,7 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
 }
 
 
-/* 作品一覧 */
+/* 制作一覧 */
 .works-container {
     position: relative;
     display: grid;
@@ -516,17 +516,36 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 6px;
-    margin-top: 15px;
+    margin-top: 13px;
+    gap: 8px 16px;
 }
 
 .profile-skills li {
     color: #061138;
-    border: 1px solid #061138;
-    padding: 5px 12px;
-    font-size: 12px;
+    font-size: 13px;
     border-radius: 100px;
 }
+
+.profile-skills__label-blue {
+    color: #5153bf;
+    font-weight: bold;
+}
+
+.profile-skills__label-yellow {
+    color: #cd8701;
+    font-weight: bold;
+}
+
+.profile-skills__label-green {
+    color: #25a146;
+    font-weight: bold;
+}
+
+.profile-skills__label-red {
+    color: #c56aa4;
+    font-weight: bold;
+}
+
 
 .profile-slider {
   display: flex;
@@ -629,7 +648,7 @@ footer img {
 .work-img {
     flex: 1 1 65%;
     padding: 25px;
-    background-color: #e2e3e7;
+    background-color: #dbdce1;
     border-left: 1px solid #061138;
     border-right: 1px solid #061138;
 }
@@ -642,7 +661,7 @@ footer img {
 
 .bread {
     display: flex;
-    padding: 20px 35px;
+    padding: 15px 35px;
     border-bottom: 1px solid #061138;
     font-size: 12px;
 }
@@ -675,8 +694,9 @@ footer img {
 }
 
 .work-explain__title {
-    font-size: 18px;
-    letter-spacing: 0.03rem;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    letter-spacing: 0.04rem;
     display: inline-block;
     background-color: #061138;
     color: #f8fdf4;
@@ -742,19 +762,21 @@ dd {
     a:hover {
         opacity: 0.6;      
     }
-    
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
     .work-container {
         flex-direction: column;
-    }
-    .container.work-container {
-        padding: 0;
     }
     .work-info {
         position: inherit;
         width: 100%;
     }
+    .container.work-container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .bread {
         padding: 12px 10px;
     }
@@ -765,7 +787,7 @@ dd {
         max-width: 210px;
     }
     .work-explain__title {
-        font-size: 16px;
+        font-size: 17px;
         margin-bottom: 12px;
     }
     .work-explain {
