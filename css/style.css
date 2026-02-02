@@ -549,6 +549,7 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
     color: #061138;
     font-size: 13px;
     border-radius: 100px;
+    width: 100%;
 }
 
 .profile-skills__label-blue {
@@ -621,7 +622,6 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
     }
 
     .profile-skills li {
-        width: 100%;
         line-height: 1.4;
     }
 
