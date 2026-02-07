@@ -103,6 +103,7 @@ position: absolute;
     color: #061138;
     font-weight: normal;
     transform: translateY(-1px);
+    font-style: italic;
 }
 
 .container {
@@ -159,10 +160,11 @@ position: absolute;
         font-size: 38px;
     }
     .sect-title__sub {
-        font-size: 14px;
+        font-size: 12px;
     }
     p {
         letter-spacing: 0.03rem;
+        font-size: 13px;
     }
 }
 
@@ -595,10 +597,10 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
         flex-direction: column;
         align-items: center;
         margin: 10px 0 ;
-        gap: 20px;
+        gap: 25px;
     }
     .profile-text-small {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 1;
     }
     .profile-img {
@@ -615,7 +617,7 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
     }
 
     .profile-logo {
-        max-width: 200px;
+        max-width: 205px;
     }
     .profile-slider img {
         width: 170px;
