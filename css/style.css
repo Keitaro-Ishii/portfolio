@@ -499,9 +499,6 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
     flex-shrink: 0;
 }
 
-.profile-img img {
-    border: 1px solid #a0a6bd;
-}
 
 .profile-text-small {
     font-size: 14px;
@@ -561,7 +558,6 @@ filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(3122%) hue-
   width: 190px;
   height: auto;
   display: block;
-  border: 1px solid #a0a6bd;
 }
 
 @keyframes slide {
