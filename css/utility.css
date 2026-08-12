@@ -1,0 +1,81 @@
+/* タイポ */
+.h-title_margin {
+    margin-bottom: 20px;
+}
+
+.h-title {
+    font-size: 18px;
+    position: relative;
+    padding-left: 17px;
+}
+
+.h-title_decoration {
+    position: relative;
+}
+
+.h-title_decoration::before {
+    content: "";
+    background: url("../img/h-title_before.svg") no-repeat;
+    position: absolute;
+    top: calc(50% + 1px);
+    left: -7px;
+    width: 9px;
+    height: 12px;
+    transform: translate(-100%,-50%);
+    background-size: cover;
+}
+
+.h-title_decoration::after {
+    content: "";
+    position: absolute;
+    top: 5px; right: 0;
+    transform: translateY(-100%);
+    background: url("../img/h-title_after.gif") no-repeat;
+    background-size: cover;
+    width: 22px;
+    height: 22px;
+}
+
+
+/* フォント調整クラス */
+.bold { font-weight: bold;}
+.normal { font-weight: normal;}
+.font-dot {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PKMN";
+  src: url("../fonts/pkmn_s.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.eng-font {
+  font-family: "PKMN", sans-serif;
+}
+
+
+/* 色 */
+.gray { color: #969696;}
+
+
+/* レイアウト調整クラス */
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* 余白調整クラス */
+.m0 { margin: 0 !important;}
+.p0 { padding: 0 !important;}
+@media screen and (min-width: 769px) {
+    .pc-none { display: none;}
+}
+
+@media screen and (max-width: 768px) {
+    .sp-none { display: none;}
+}
