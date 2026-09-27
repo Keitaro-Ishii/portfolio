@@ -12,265 +12,930 @@
   <meta property="og:url" content="https://keitaro-ishii.com/">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utility.css">
   <link rel="stylesheet" href="https://use.typekit.net/pnj2gna.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'pnj2gna',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+  
 </head>
 
 <body>
-   <div class="bg">
-    <div class="noise"></div>
+
+<!-- <div class="modal">
+  <div class="modal-img_container">
+    <img src="img/modal-works-01.jpg">
   </div>
+  <div class="modal-text_container">
+    <h4 class="modal-text_title">90KU-KANリリース</h4>
+    <p class="modal-text_explain">
+      創作プラットフォーム90KU-KANのリリース時のデザインを担当しました。<br>
+      TOPページ、管理系画面、一覧系画面、設定画面等のデザインを担当しております。<br>
+      コーディングもほぼすべての画面を担当しております。
+    </p>
+    <hr class="modal-hr">
+    <ul class="modal-subexplain_list">
+      <li class="modal-subexplain">
+        <p class="modal-subexplain_title">Year</p>
+        <p class="modal-subexplain_content">2025</p>
+      </li>
+      <li class="modal-subexplain">
+        <p class="modal-subexplain_title">URL</p>
+        <p class="modal-subexplain_content">
+          <a class="modal-subexplain_content--link" href="">https://9kk.skima.jp<i class="fa-solid fa-up-right-from-square"></i></a>
+        </p>
+      </li>
+      <li class="modal-subexplain">
+        <p class="modal-subexplain_title">担当領域</p>
+        <p class="modal-subexplain_content">HTML / CSS、レスポンシブ対応、軽微なアニメーション実装</p>
+      </li>
+    </ul>
+    <button class="modal-close">
+      close 
+      <span class="modal-close_img--container">
+        <img src="img/modal-close.svg">
+      </span>
+    </button>
+  </div>
+</div> -->
 
-  <header>
-    <div class="header-container">
+<div class="back-top">
+  <a href="#" class="back-top_btn">
+    <img class="back-top_face" src="img/h-title_after.gif">
+  </a>
 
-      <div class="header-logo">
-        <a href="index.html">
-          <img src="img/logo.svg" alt="logo">
-        </a>
-      </div>
-      <ul class="header-menu">
-        <li><a class="header-menu__list" href="#profile">PROFILE</a></li>
-        <li><a class="header-menu__list" href="#work">WORKS</a></li>
-        <li><a class="header-menu__list" href="#note">NOTE</a></li>
-        <li><a class="header-menu__list last" a href="https://forms.gle/XymYTzAseJJ3Smz17" target="_blank">お問い合わせはこちら</a></li>
+  <svg class="back-top_text" viewBox="0 0 100 100">
+    <defs>
+      <path
+        id="back-top_circle"
+        d="M 50,50
+           m -42,0
+           a 42,42 0 1,1 84,0
+           a 42,42 0 1,1 -84,0"
+      />
+    </defs>
+
+<text>
+  <textPath href="#back-top_circle" startOffset="0%">
+    BACK TO TOP
+  </textPath>
+
+  <textPath href="#back-top_circle" startOffset="50%">
+    BACK TO TOP
+  </textPath>
+</text>
+  </svg>
+</div>
+  
+<header class="header-sect">
+  <div class="header-inner">
+    <div class="header-logo_container">
+      <img src="img/header-logo.png">
+    </div>
+    <div class="text-slider_container">
+      <ul class="text-slider">
+        <li><img class="header-slider_text" src="/img/header-slider-text.svg"></li>
       </ul>
-
-      <div class="menu-icon">
-        <span class="bar"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
+      <div class="header-slider_icon--container">
+        <img src="/img/h-title_after.gif">
       </div>
     </div>
-
-    <nav class="sp-menu">
-      <ul class="sp-menu_list">
-        <li><a class="sp-menu_list--link" href="#profile">PROFILE<span> / プロフィール</span></a></li>
-        <li><a class="sp-menu_list--link" href="#work">WORKS<span> / 制作一覧</span></a></li>
-        <li><a class="sp-menu_list--link" href="#note">NOTE<span> / 仕事と日常のこと</span></a></li>
-      </ul>
-      <a class="sp-menu_list--link mail" href="https://forms.gle/XymYTzAseJJ3Smz17" target="_blank">お問い合わせはこちら</a>
-    </nav>
-
-  </header>
-
-
-    <section class="sect">
-    <div class="container">
-      <!-- <div class="comment-slider-wrap">
-        <ul class="comment-slider">
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
-          <li>ポートフォリオサイトオープンしました！</li>
+    <div class="header-nav_container">
+      <nav>
+        <ul class="header-nav">
+          <li><a href="" class="header-nav_link">私について</a></li>
+          <li><a href="" class="header-nav_link">制作一覧</a></li>
+          <li><a href="" class="header-nav_link">日常と仕事のことをおとどけ</a></li>
+          <li><a href="" class="header-nav_link">お問い合わせ</a></li>
         </ul>
-      </div> -->
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="sect receipt-sect">
+  <div class="sect-inner">
+    <h2 class="h-title h-title_margin "><span class="h-title_decoration">私について</span></h2>
+    <div class="profile-receipt">
+
+      <span class="receipt-number">NO.XX</span>
+      <span class="receipt-date date"></span>
+      <div class="receipt-title"><img src="img/receipt-title.svg"></div>
       
-      <h1 id="profile" class="sect-title anchor-position"><span>PROFILE</span></h1>
-      <span class="sect-title__sub">プロフィール</span>
+      <hr class="receipt-border_solid">
 
-      <div class="profile-container">
+      <div class="receipt-profile_img">
+        <img src="img/profile-img.jpg">
+      </div>
 
-        <div class="profile-info-container">
-          <div class="profile-img">
-            <img src="img/profile-img.png">
-          </div>
-          <div class="profile-info">
-            <div class="profile-info__head">
-              <img class="profile-logo" src="img/logo.svg">
-              <span>／</span>
-              <p class="profile-text-small">Web Designer</p>
-            </div>
-            <p>
-              1999年生まれ、神奈川県小田原市出身。<br>
-              池袋のコンテンツ制作会社、株式会社ビジュアルワークスに入社し、webデザインを中心に3年インハウスデザイナーをしておりました。<br>
-              デザインにおいては、目的や課題を整理したうえでの情報設計を重視ユーザーの行動や心理を意識し、「迷わず使える」「直感的に伝わる」UIを意識した設計を強みとしています。<br>
-              ユーザー目線とビジネス視点の両立を意識しながら、自社サービスの改善提案やページ調整にも取り組んできました。<br>
-              pc表示をspに収めていくときのレスポンシブの様がすきです。<br>
-              趣味は、イラスト描いたり、映画を観ることです。好きな映画監督は、ニールブロムカンプ監督です。
-            </p>
-          </div>
-        </div>
+      <p class="receipt-profile_job">Web Designer</p>
+      <p class="receipt-profile_name">石井慶太郎（いしい けいたろう）</p>
+      <p class="receipt-profile_explain">
+        1999年生まれ、神奈川県小田原市出身です。<br>
+        池袋のコンテンツ制作会社、株式会社ビジュアルワークスに入社し、webデザインを中心に3年WEBデザイナーをしております。<br>
+        pc表示をspに収めていくときのレスポンシブの様がすきです。
+      </p>
 
-        <div>
-          <p class="triangle-wrap"><img class="triangle-down" src="img/triangle.svg">Skill</p>
-          <ul class="profile-skills">
-            <li>・Adobe Photoshop：写真加工、バナーデザイン、ウェブデザインなど</li>
-            <li>・Adobe Illustrator：アイコン作成</li>
-            <li>・Figma：ウェブデザイン</li>
-            <li>・コーディング：html、css、javasript用いたコーディング、githubを用いたバージョン管理</li>
-          </ul>
-        </div>
+      <div class="receipt-border_container">
+        <hr class="receipt-border_dot">
+        <hr class="receipt-border_dot">
+      </div>
 
-        <div class="profile-slider-wrap">
-          <p class="triangle-wrap"><img class="triangle-down" src="img/triangle.svg">Illustration</p>
-          <ul class="profile-slider">
-            <li><img src="img/img01.jpg"></li>
-            <li><img src="img/img02.jpg"></li>
-            <li><img src="img/img03.jpg"></li>
-            <li><img src="img/img04.jpg"></li>
-            <li><img src="img/img05.jpg"></li>
-            <li><img src="img/img06.jpg"></li>
-            
-            <li><img src="img/img01.jpg"></li>
-            <li><img src="img/img02.jpg"></li>
-            <li><img src="img/img03.jpg"></li>
-            <li><img src="img/img04.jpg"></li>
-            <li><img src="img/img05.jpg"></li>
-            <li><img src="img/img06.jpg"></li>
-          </ul>
-        </div>
+      <p class="receipt-me_title">できること...</p>
+      <div>
+
+        <ul class="receipt-me_list">
+          <li class="receipt-me_skill">
+            <p class="receipt-me_skill--title"><i class="fa-solid fa-pencil"></i>デザイン</p>
+            <p class="receipt-me_skill--content">UIデザイン / バナーデザイン / WEBデザイン</p>
+          </li>
+          <li class="receipt-me_skill">
+            <p class="receipt-me_skill--title"><i class="fa-solid fa-code"></i>コーディング</p>
+            <p class="receipt-me_skill--content">HTML / CSS /JavaScript / レスポンシブ対応</p>
+          </li>
+          <li class="receipt-me_skill">
+            <p class="receipt-me_skill--title"><i class="fa-solid fa-toolbox"></i>ツール</p>
+            <p class="receipt-me_skill--content">Photoshop / Illustrator / Figma / Github</p>
+          </li>
+        </ul>
 
       </div>
 
-
-    </div>
-  </section>
-
-<hr>
-
-  <section class="sect">
-    <div class="container">
-
-      <h1 id="work" class="sect-title anchor-position"><span>WORKS</span></h1>
-      <span class="sect-title__sub">制作一覧</span>
-
-      <div class="works-container">
-
-        <div class="works">
-          <a class="works-link" href="work-90.html">
-            <img class="works-img" src="img/work01.png">
-          </a>
-          <div class="work-name-container">
-            <a href="work-90.html" class="works-name">90KU-KANリリース</a>
-            <p><span class="works-label">#cording</span><span class="works-label">#design</span></p>
-          </div>
-        </div>
-        <div class="works">
-          <a class="works-link" href="work-6th-award.html">
-            <img class="works-img" src="img/work07.png">
-          </a>
-          <div class="work-name-container">
-            <a href="work-6th-award.html" class="works-name">第6回SKIMAアワードLP</a>
-            <p><span class="works-label">#cording</span></p>
-          </div>
-        </div>
-        <div class="works">
-          <a class="works-link" href="work-5th-award.html">
-            <img class="works-img" src="img/work06.png">
-          </a>
-          <div class="work-name-container">
-            <a href="work-5th-award.html" class="works-name">第5回SKIMAアワードLP</a>
-            <p><span class="works-label">#cording</span></p>
-          </div>
-        </div>
-        <div class="works">
-          <a class="works-link" href="work-4th-award.html">
-            <img class="works-img" src="img/work05.png">
-          </a>
-          <div class="work-name-container">
-            <a href="work-4th-award.html" class="works-name">第4回SKIMAアワードLP</a>
-            <p><span class="works-label">#cording</span></p>
-          </div>
-        </div>
-        <div class="works">
-          <a class="works-link" href="work-recruit.html">
-            <img class="works-img" src="img/work02.png">
-          </a>
-          <div class="work-name-container">
-            <a href="work-recruit.html" class="works-name">自社採用LP</a>
-            <p><span class="works-label">#cording</span></p>
-          </div>
-        </div>
-        <div class="works">
-          <a class="works-link" href="work-abroad-skill.html">
-            <img class="works-img" src="img/work03.png">
-          </a>
-          <div class="work-name-container">
-            <a href="work-abroad-skill.html" class="works-name">海外SKIMA告知LP</a>
-            <p><span class="works-label">#cording</span></p>
-          </div>
-        </div>
-        <div class="works">
-          <a class="works-link" href="work-abroad-opt.html">
-            <img class="works-img" src="img/work04.png">
-            
-          </a>
-          <div class="work-name-container">
-            <a href="work-abroad-opt.html" class="works-name">海外SKIMA告知用LP</a>
-            <p><span class="works-label">#cording</span></p>
-          </div>
-        </div>
-        
+      
+      <div class="receipt-border_container">
+        <hr class="receipt-border_dot">
+        <hr class="receipt-border_dot">
       </div>
+
+      <p class="receipt-me_title">すきなもの...</p>
+      <div class="receipt-like_img--container">
+        <img src="img/receipt-like-01.png">
+        <img src="img/receipt-like-02.png">
+        <img src="img/receipt-like-03.png">
+        <img src="img/receipt-like-04.png">
+      </div>
+
+      <div class="receipt-border_container">
+        <hr class="receipt-border_dot">
+        <hr class="receipt-border_dot">
+      </div>
+
+      <div class="receipt-thankyou"><img src="img/recipt-thank.svg"></div>
+
+      <div class="receipt-border_container">
+        <hr class="receipt-border_dot">
+        <hr class="receipt-border_dot">
+      </div>
+
+      <div class="receipt-barcode_container">
+        <img src="img/barcode.png">
+      </div>
+
+      <div class="receipt-logo_container">
+        <img src="img/single-logo.svg">
+      </div>
+      <div class="center">
+        <small class="gray">@ishii keitaro portfolio</small>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <hr>
 
-  <section class="sect">
-    <div class="container">
-      <h1 id="note" class="sect-title anchor-position"><span>NOTE</span></h1>
-      <span class="sect-title__sub">仕事と日常のこと</span>
-      <ul class="note-container">
-        <li class="note-item">
-          <a href="note-1.html" class="note-item_link">
-            <div class="note-item_link--info">
-              <p class="note-item_link--info_number">1</p>
-              <img class="note-item_link--info_thumb" src="img/note-thumb-1.jpg">
-              <p class="note-item_link--info_title">
-                初めてサービスを作った話<br>
-                <span class="note-item_link--info_date">2026.01.22</span>
-              </p>
+<section class="sect">
+  <div class="sect-inner">
+    <h2 class="h-title h-title_margin "><span class="h-title_decoration">制作一覧</span></h2>
+    <ul class="works-list">
+      <li class="works-item">
+        <div class="works-item_inner">
+          <img class="work-antenna" src="img/work-antenna.svg">
+          <img class="work-stand" src="img/work-stand.svg">
+          <div class="work-head">
+            <div class="works-thumb_container">
+              <div class="works-thumb_inner">
+                <svg
+                  class="crt-screen"
+                  viewBox="0 0 100 75"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <clipPath id="crt-screen-shape">
+                      <path d="
+                        M 5,7
+                        Q 50,0 95,7
+                        Q 100,37.5 95,68
+                        Q 50,75 5,68
+                        Q 0,37.5 5,7
+                        Z
+                      " />
+                    </clipPath>
+                  </defs>
+    
+                  <image
+                    href="img/works-01.jpg"
+                    x="0"
+                    y="0"
+                    width="100"
+                    height="75"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#crt-screen-shape)"
+                  />
+                </svg>
+              </div>
             </div>
-            <span class="note-item_link--label">#仕事のこと</span>
+            <div class="work-decoration_container">
+              <img class="work-switch work-switch-left" src="img/work-switch.svg">
+              <img class="work-switch work-switch-right" src="img/work-switch.svg">
+              <img class="work-soundbar" src="img/work-soundbar.svg">
+            </div>
+          </div>
+          <div class="works-label">
+            <div>
+              <span class="works-label_tag">コーディング</span>
+              <span class="works-label_tag">デザイン</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="works-title">90KU-KANリリース</h3>
+      </li>
+      <li class="works-item">
+        <div class="works-item_inner bg-yellow">
+          <img class="work-antenna" src="img/work-antenna.svg">
+          <img class="work-stand" src="img/work-stand.svg">
+          <div class="work-head">
+            <div class="works-thumb_container">
+              <div class="works-thumb_inner">
+                <svg
+                  class="crt-screen"
+                  viewBox="0 0 100 75"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <clipPath id="crt-screen-shape">
+                      <path d="
+                        M 5,7
+                        Q 50,0 95,7
+                        Q 100,37.5 95,68
+                        Q 50,75 5,68
+                        Q 0,37.5 5,7
+                        Z
+                      " />
+                    </clipPath>
+                  </defs>
+    
+                  <image
+                    href="img/works-02.jpg"
+                    x="0"
+                    y="0"
+                    width="100"
+                    height="75"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#crt-screen-shape)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="work-decoration_container">
+              <img class="work-switch work-switch-left" src="img/work-switch.svg">
+              <img class="work-switch work-switch-right" src="img/work-switch.svg">
+              <img class="work-soundbar" src="img/work-soundbar.svg">
+            </div>
+          </div>
+          <div class="works-label">
+            <div>
+              <span class="works-label_tag yellow">コーディング</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="works-title">90KU-KANリリース</h3>
+      </li>
+      <li class="works-item">
+        <div class="works-item_inner bg-lightblue">
+          <img class="work-antenna" src="img/work-antenna.svg">
+          <img class="work-stand" src="img/work-stand.svg">
+          <div class="work-head">
+            <div class="works-thumb_container">
+              <div class="works-thumb_inner">
+                <svg
+                  class="crt-screen"
+                  viewBox="0 0 100 75"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <clipPath id="crt-screen-shape">
+                      <path d="
+                        M 5,7
+                        Q 50,0 95,7
+                        Q 100,37.5 95,68
+                        Q 50,75 5,68
+                        Q 0,37.5 5,7
+                        Z
+                      " />
+                    </clipPath>
+                  </defs>
+    
+                  <image
+                    href="img/works-03.jpg"
+                    x="0"
+                    y="0"
+                    width="100"
+                    height="75"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#crt-screen-shape)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="work-decoration_container">
+              <img class="work-switch work-switch-left" src="img/work-switch.svg">
+              <img class="work-switch work-switch-right" src="img/work-switch.svg">
+              <img class="work-soundbar" src="img/work-soundbar.svg">
+            </div>
+          </div>
+          <div class="works-label">
+            <div>
+              <span class="works-label_tag lightblue">コーディング</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="works-title">90KU-KANリリース</h3>
+      </li>
+      <li class="works-item">
+        <div class="works-item_inner bg-blue">
+          <img class="work-antenna" src="img/work-antenna.svg">
+          <img class="work-stand" src="img/work-stand.svg">
+          <div class="work-head">
+            <div class="works-thumb_container">
+              <div class="works-thumb_inner">
+                <svg
+                  class="crt-screen"
+                  viewBox="0 0 100 75"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <clipPath id="crt-screen-shape">
+                      <path d="
+                        M 5,7
+                        Q 50,0 95,7
+                        Q 100,37.5 95,68
+                        Q 50,75 5,68
+                        Q 0,37.5 5,7
+                        Z
+                      " />
+                    </clipPath>
+                  </defs>
+    
+                  <image
+                    href="img/works-04.jpg"
+                    x="0"
+                    y="0"
+                    width="100"
+                    height="75"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#crt-screen-shape)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="work-decoration_container">
+              <img class="work-switch work-switch-left" src="img/work-switch.svg">
+              <img class="work-switch work-switch-right" src="img/work-switch.svg">
+              <img class="work-soundbar" src="img/work-soundbar.svg">
+            </div>
+          </div>
+          <div class="works-label">
+            <div>
+              <span class="works-label_tag blue">コーディング</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="works-title">90KU-KANリリース</h3>
+      </li>
+      <li class="works-item">
+        <div class="works-item_inner bg-gray">
+          <img class="work-antenna" src="img/work-antenna.svg">
+          <img class="work-stand" src="img/work-stand.svg">
+          <div class="work-head">
+            <div class="works-thumb_container">
+              <div class="works-thumb_inner">
+                <svg
+                  class="crt-screen"
+                  viewBox="0 0 100 75"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <clipPath id="crt-screen-shape">
+                      <path d="
+                        M 5,7
+                        Q 50,0 95,7
+                        Q 100,37.5 95,68
+                        Q 50,75 5,68
+                        Q 0,37.5 5,7
+                        Z
+                      " />
+                    </clipPath>
+                  </defs>
+    
+                  <image
+                    href="img/works-05.jpg"
+                    x="0"
+                    y="0"
+                    width="100"
+                    height="75"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#crt-screen-shape)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="work-decoration_container">
+              <img class="work-switch work-switch-left" src="img/work-switch.svg">
+              <img class="work-switch work-switch-right" src="img/work-switch.svg">
+              <img class="work-soundbar" src="img/work-soundbar.svg">
+            </div>
+          </div>
+          <div class="works-label">
+            <div>
+              <span class="works-label_tag gray">コーディング</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="works-title">90KU-KANリリース</h3>
+      </li>
+      <li class="works-item">
+        <div class="works-item_inner">
+          <img class="work-antenna" src="img/work-antenna.svg">
+          <img class="work-stand" src="img/work-stand.svg">
+          <div class="work-head">
+            <div class="works-thumb_container">
+              <div class="works-thumb_inner">
+                <svg
+                  class="crt-screen"
+                  viewBox="0 0 100 75"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <clipPath id="crt-screen-shape">
+                      <path d="
+                        M 5,7
+                        Q 50,0 95,7
+                        Q 100,37.5 95,68
+                        Q 50,75 5,68
+                        Q 0,37.5 5,7
+                        Z
+                      " />
+                    </clipPath>
+                  </defs>
+    
+                  <image
+                    href="img/works-06.jpg"
+                    x="0"
+                    y="0"
+                    width="100"
+                    height="75"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#crt-screen-shape)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="work-decoration_container">
+              <img class="work-switch work-switch-left" src="img/work-switch.svg">
+              <img class="work-switch work-switch-right" src="img/work-switch.svg">
+              <img class="work-soundbar" src="img/work-soundbar.svg">
+            </div>
+          </div>
+          <div class="works-label">
+            <div>
+              <span class="works-label_tag">コーディング</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="works-title">90KU-KANリリース</h3>
+      </li>
+      <li class="works-item">
+        <div class="works-item_inner bg-yellow">
+          <img class="work-antenna" src="img/work-antenna.svg">
+          <img class="work-stand" src="img/work-stand.svg">
+          <div class="work-head">
+            <div class="works-thumb_container">
+              <div class="works-thumb_inner">
+                <svg
+                  class="crt-screen"
+                  viewBox="0 0 100 75"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <clipPath id="crt-screen-shape">
+                      <path d="
+                        M 5,7
+                        Q 50,0 95,7
+                        Q 100,37.5 95,68
+                        Q 50,75 5,68
+                        Q 0,37.5 5,7
+                        Z
+                      " />
+                    </clipPath>
+                  </defs>
+    
+                  <image
+                    href="img/works-07.jpg"
+                    x="0"
+                    y="0"
+                    width="100"
+                    height="75"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#crt-screen-shape)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="work-decoration_container">
+              <img class="work-switch work-switch-left" src="img/work-switch.svg">
+              <img class="work-switch work-switch-right" src="img/work-switch.svg">
+              <img class="work-soundbar" src="img/work-soundbar.svg">
+            </div>
+          </div>
+          <div class="works-label">
+            <div>
+              <span class="works-label_tag yellow">コーディング</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="works-title">90KU-KANリリース</h3>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+<section class="sect news-sect">
+  <div class="sect-inner">
+    <h2 class="h-title h-title_margin "><span class="h-title_decoration">日常と仕事のこととか</span></h2>
+
+    <div class="news-list_viewport">
+      <ul class="news-list">
+        <li>
+          <a class="news-item">
+            <div class="news-thumb_container">
+              <span class="news-badge">#01</span>
+              <img src="https://placehold.jp/300x300.png">
+            </div>
+            <div class="news-info_container">
+              <div>
+                <p class="news-title">はじめてさーびすを作った話</p>
+                <p class="news-explain">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ</p>
+                <p class="news-date date">2026.6.27 WEDNESDAY</p>
+              </div>
+              <div class="news-barcode_container">
+                <img src="img/barcode.png">
+              </div>
+            </div>
           </a>
         </li>
-        <li class="note-item">
-          <a href="note-2.html" class="note-item_link">
-            <div class="note-item_link--info">
-              <p class="note-item_link--info_number">2</p>
-              <img class="note-item_link--info_thumb" src="img/note-thumb-2.jpg">
-              <p class="note-item_link--info_title">
-                2たまご話<br>
-                <span class="note-item_link--info_date">2026.01.02</span>
-              </p>
+        <li>
+          <a class="news-item">
+            <div class="news-thumb_container">
+              <span class="news-badge">#02</span>
+              <img src="https://placehold.jp/300x300.png">
             </div>
-            <span class="note-item_link--label">#日常のこと</span>
+            <div class="news-info_container">
+              <div>
+                <p class="news-title">はじめてさーびすを作った話</p>
+                <p class="news-explain">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ</p>
+                <p class="news-date date">2026.6.27 WEDNESDAY</p>
+              </div>
+              <div class="news-barcode_container">
+                <img src="img/barcode.png">
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="news-item">
+            <div class="news-thumb_container">
+              <span class="news-badge">#03</span>
+              <img src="https://placehold.jp/300x300.png">
+            </div>
+            <div class="news-info_container">
+              <div>
+                <p class="news-title">はじめてさーびすを作った話</p>
+                <p class="news-explain">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ</p>
+                <p class="news-date date">2026.6.27 WEDNESDAY</p>
+              </div>
+              <div class="news-barcode_container">
+                <img src="img/barcode.png">
+              </div>
+            </div>
           </a>
         </li>
       </ul>
     </div>
-  </section>
+    <div class="news-list_bar">
+      <span class="bar active"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <!-- <div class="is-flex flex-end align-center gap10">
+      <button class="news-btn"><i class="fa-solid fa-hand-point-left"></i></button>
+      <button class="news-btn"><i class="fa-solid fa-hand-point-right"></i></button>
+    </div> -->
+  </div>
+</section>
 
-  <footer>
-    <small>@ ishii keitaro Portfolio</small>
-  </footer>
+
+<footer class="sect footer-sect">
+  <div class="sect-inner">
+
+    <div class="footer-logo_container">
+      <img src="img/single-logo.svg">
+    </div>
+    <nav>
+      <ul class="footer-nav">
+        <li><a href="" class="footer-nav_link">私について</a></li>
+        <li><a href="" class="footer-nav_link ">制作一覧</a></li>
+        <li><a href="" class="footer-nav_link ">日常と仕事のことをおとどけ</a></li>
+        <li><a href="" class="footer-nav_link ">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <small class="gray">@ishii keitaro portfolio</small>
+  </div>
+</footer>
+
+
 
 <script>
-  const menuIcon = document.querySelector('.menu-icon');
-  const spMenu = document.querySelector('.sp-menu');
-  const spMenuLinks = document.querySelectorAll('.sp-menu_list--link');
+ document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".text-slider");
 
-  menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('is-active');
-    spMenu.classList.toggle('is-active');
-  });
+  if (!slider) return;
 
-  spMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuIcon.classList.remove('is-active');
-      spMenu.classList.remove('is-active');
+  const originalItem = slider.querySelector("li");
+
+  // 一旦中身を空にする
+  slider.innerHTML = "";
+
+  // 画面幅の2倍以上になるまで複製
+  do {
+    slider.appendChild(originalItem.cloneNode(true));
+  } while (slider.scrollWidth < window.innerWidth * 2);
+
+  let position = 0;
+
+  // 1回で動く距離
+  const step = 8;
+
+  // 更新間隔
+  const interval = 300;
+
+  function move() {
+    position -= step;
+
+    const firstItem = slider.children[0];
+    const itemWidth = firstItem.offsetWidth;
+
+    // 1つ分移動したら先頭のLIを最後に移動
+    if (-position >= itemWidth) {
+      position += itemWidth;
+      slider.appendChild(firstItem);
+    }
+
+    // ULではなく、それぞれのLIを動かす
+    Array.from(slider.children).forEach((item) => {
+      item.style.transform = `translate3d(${Math.round(position)}px, 0, 0)`;
     });
-  });
+  }
+
+  setInterval(move, interval);
+});
+
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const weekdays = [
+    "SUN",
+    "MON",
+    "TUE",
+    "WED",
+    "THU",
+    "FRI",
+    "SAT"
+  ];
+  const weekday = weekdays[date.getDay()];
+  document.querySelector(".date").textContent =
+  `${year}.${month}.${day} ${weekday}`;
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const viewport = document.querySelector('.news-list_viewport');
+    const list = document.querySelector('.news-list');
+    const originalItems = [...document.querySelectorAll('.news-list li')];
+    const bars = document.querySelectorAll('.news-list_bar .bar');
+
+    if (!viewport || !list || originalItems.length === 0) return;
+
+    const total = originalItems.length;
+
+    let currentIndex = total; // 真ん中のコピーからスタート
+    let timer;
+
+    // -------------------------
+    // liを複製
+    // -------------------------
+
+    const before = originalItems.map(item => item.cloneNode(true));
+    const after = originalItems.map(item => item.cloneNode(true));
+
+    before.reverse().forEach(item => {
+        list.insertBefore(item, list.firstChild);
+    });
+
+    after.forEach(item => {
+        list.appendChild(item);
+    });
+
+    const items = [...list.querySelectorAll('li')];
+
+
+    // -------------------------
+    // 左右の余白
+    // -------------------------
+
+    function setSidePadding() {
+
+        const viewportWidth = viewport.clientWidth;
+        const itemWidth = items[0].offsetWidth;
+
+        const padding = Math.max(
+            0,
+            (viewportWidth - itemWidth) / 2
+        );
+
+        list.style.paddingLeft = `${padding}px`;
+        list.style.paddingRight = `${padding}px`;
+    }
+
+
+    // -------------------------
+    // スライド位置
+    // -------------------------
+
+    function getPosition(index) {
+
+        const item = items[index];
+
+        return (
+            item.offsetLeft -
+            (viewport.clientWidth - item.offsetWidth) / 2
+        );
+    }
+
+
+    // -------------------------
+    // バー更新
+    // -------------------------
+
+    function updateBar() {
+
+        const realIndex = currentIndex % total;
+
+        bars.forEach((bar, index) => {
+
+            bar.classList.toggle(
+                'active',
+                index === realIndex
+            );
+
+        });
+    }
+
+
+    // -------------------------
+    // スライド
+    // -------------------------
+
+    function slideTo(index, smooth = true) {
+
+        currentIndex = index;
+
+        viewport.scrollTo({
+            left: getPosition(currentIndex),
+            behavior: smooth ? 'smooth' : 'auto'
+        });
+
+        updateBar();
+    }
+
+
+    // -------------------------
+    // 次へ
+    // -------------------------
+
+    function nextSlide() {
+
+        currentIndex++;
+
+        slideTo(currentIndex);
+
+        /*
+         * 真ん中のコピーが終わったら
+         * アニメーション終了後に
+         * 同じ位置のコピーへ瞬間移動
+         */
+        if (currentIndex >= total * 2) {
+
+            setTimeout(() => {
+
+                currentIndex = total;
+
+                viewport.scrollTo({
+                    left: getPosition(currentIndex),
+                    behavior: 'auto'
+                });
+
+                updateBar();
+
+            }, 500);
+        }
+    }
+
+
+    // -------------------------
+    // 自動再生
+    // -------------------------
+
+    function startSlider() {
+
+        clearInterval(timer);
+
+        timer = setInterval(() => {
+            nextSlide();
+        }, 5000);
+    }
+
+
+    // -------------------------
+    // 初期化
+    // -------------------------
+
+    function init() {
+
+        setSidePadding();
+
+        // 2枚目を中央にする
+        currentIndex = total + 1;
+
+        viewport.scrollTo({
+            left: getPosition(currentIndex),
+            behavior: 'auto'
+        });
+
+        updateBar();
+
+        startSlider();
+    }
+
+
+    // -------------------------
+    // リサイズ
+    // -------------------------
+
+    window.addEventListener('resize', () => {
+
+        setSidePadding();
+
+        viewport.scrollTo({
+            left: getPosition(currentIndex),
+            behavior: 'auto'
+        });
+
+    });
+
+
+    init();
+
+});
+
+  
 </script>
+
 
 </body>
 </html>

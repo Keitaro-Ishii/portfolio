@@ -7,6 +7,8 @@
     font-size: 18px;
     position: relative;
     padding-left: 17px;
+    font-family: momochidori-variable, sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 150, "wght" 800;
 }
 
 .h-title_decoration {
@@ -22,29 +24,37 @@
     width: 9px;
     height: 12px;
     transform: translate(-100%,-50%);
-    background-size: cover;
+    background-size: contain;
 }
 
 .h-title_decoration::after {
     content: "";
     position: absolute;
-    top: 5px; right: 0;
+    top: 0; right: 0;
     transform: translateY(-100%);
     background: url("../img/h-title_after.gif") no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 22px;
     height: 22px;
+}
+
+@media (max-width:768px) {
+    .h-title_margin {
+        margin-bottom: 15px;
+    }
+    .h-title {
+        font-size: 16px;
+    }
+    .h-title_decoration::before {
+        width: 7px;
+        height: 10px;
+    }
 }
 
 
 /* フォント調整クラス */
 .bold { font-weight: bold;}
 .normal { font-weight: normal;}
-.font-dot {
-  font-family: "DotGothic16", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "PKMN";
@@ -59,10 +69,34 @@
 
 
 /* 色 */
-.gray { color: #969696;}
+.yellow {color: #e49801;}
+.lightblue {color: #00bac7;}
+.blue {color: #004ef5;}
+.gray {color: #9D9D9D;}
+
+
+.bg-yellow {background-color: #e49801;}
+.bg-lightblue {background-color: #00bac7;}
+.bg-blue {background-color: #004ef5;}
+.bg-gray {background-color: #9D9D9D;}
+
+
 
 
 /* レイアウト調整クラス */
+.is-flex {
+    display: flex;
+} 
+.align-center {
+    align-items: center;
+}
+.gap10 {
+    gap: 10px;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+
 .center {
     text-align: center;
     margin: 0 auto;
@@ -72,6 +106,7 @@
 /* 余白調整クラス */
 .m0 { margin: 0 !important;}
 .p0 { padding: 0 !important;}
+.pl0 { padding-left: 0 !important;}
 @media screen and (min-width: 769px) {
     .pc-none { display: none;}
 }
