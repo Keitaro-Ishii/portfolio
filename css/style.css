@@ -161,6 +161,21 @@ small {
     }
 }
 
+.sidebar {
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s all ease;
+    margin: 3px 0;
+}
+
+@media (min-width:769px) {
+    .sidebar {
+        display: none;
+    }
+}
+
 /* ヘッダー */
 .header-inner {
     max-width: 1560px;
@@ -244,7 +259,10 @@ small {
         display: none;
     }
     .header-logo_container {
-        max-width: 260px;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
     .header-inner {
         flex-direction: column;
