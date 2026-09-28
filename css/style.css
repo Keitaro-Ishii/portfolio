@@ -261,9 +261,12 @@ small {
         margin-right: calc(50% - 50vw);
         border: none;
         padding: 3px 10px 3px 0;
+        background-image: radial-gradient(circle, rgba(255, 133, 80, 1) 0 1px, transparent 1.5px), radial-gradient(circle, rgba(255, 133, 80, 1) 0 1px, transparent 1.5px), linear-gradient(rgba(255, 84, 9, 1), rgba(255, 84, 9, 1));
+        background-size: 11px 11px, 11px 11px, auto;
+        background-position: 0px 0px, 5px 5px, 0 0;
     }
     .header-slider_text {
-        width: 570px
+        width: 450px
     }
 }
 
