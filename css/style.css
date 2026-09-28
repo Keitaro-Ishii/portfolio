@@ -86,7 +86,7 @@ small {
     }
     .footer-sect {
         margin: 0;
-        padding: 25px 10px;
+        padding: 25px 10px 65px;
     }
 }
 
@@ -152,7 +152,14 @@ small {
         border-color: #fff;
     }
 }
-
+@media (max-width:768px) {
+    .back-top {
+        width: 70px;
+        height: 70px;
+        right: 25px;
+        bottom: 25px;
+    }
+}
 
 /* ヘッダー */
 .header-inner {
@@ -256,7 +263,7 @@ small {
         padding: 3px 10px 3px 0;
     }
     .header-slider_text {
-        width: 600px
+        width: 570px
     }
 }
 
@@ -858,10 +865,17 @@ small {
     padding: 10px;
     font-size: 12px;
 }
+.footer-sect small {
+    padding-left: 10px;
+}
+
 @media(max-width:768px) {
     .footer-nav_link {
         padding: 5px; 
-        font-size: 11px;
+        font-size: 12px;
+    }
+    .footer-sect small {
+        padding-left: 5px;
     }
 }
 
