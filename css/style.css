@@ -160,10 +160,14 @@ small {
         bottom: 25px;
     }
 }
+.sidemenu-btn {
+    display: block;
+    padding: 0 5px;
+}
 
 .sidebar {
     display: block;
-    width: 15px;
+    width: 18px;
     height: 2px;
     background-color: #fff;
     transition: 0.3s all ease;
