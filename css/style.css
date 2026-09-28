@@ -77,6 +77,8 @@ small {
     }
     .receipt-sect {
         margin-top: 0;
+        padding: 30px 15px;
+
     }
     .news-sect {
         margin-bottom: 0;
@@ -251,10 +253,10 @@ small {
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
         border: none;
-        padding: 5px 10px 5px 0;
+        padding: 3px 10px 3px 0;
     }
     .header-slider_text {
-        width: 650px
+        width: 600px
     }
 }
 
@@ -463,14 +465,14 @@ small {
         max-width: 104px;
     }
     .work-switch {
-        max-width: 20px;
+        max-width: 25px;
     }
     .work-soundbar {
         max-width: 30px;
         margin-top: 50px;
     }
     .work-decoration_container {
-        max-width: 40px;
+        max-width: 45px;
     }
     .works-thumb_inner {
         border-radius: 55px;
@@ -660,12 +662,12 @@ small {
         max-width: 165px;
     }
     .receipt-barcode_container {
-        max-width: 210px;
+        max-width: 250px;
         margin: 40px auto;
     }
     .receipt-logo_container {
-        max-width: 160px;
-        margin: 0 auto;
+        max-width: 190px;
+        margin: 0 auto 5px;
     }
     .receipt-me_list {
         gap: 15px;
@@ -858,7 +860,8 @@ small {
 }
 @media(max-width:768px) {
     .footer-nav_link {
-        padding: 6px; 
+        padding: 5px; 
+        font-size: 11px;
     }
 }
 
