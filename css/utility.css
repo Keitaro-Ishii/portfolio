@@ -101,6 +101,9 @@
     text-align: center;
     margin: 0 auto;
 }
+.text-right {
+    text-align: right;
+}
 
 
 /* 余白調整クラス */

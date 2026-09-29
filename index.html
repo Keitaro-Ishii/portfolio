@@ -97,26 +97,25 @@
   </svg>
 </div>
 
-<!-- <div class="sidemenu-container">
-  
-  <div class="sidemenu">
-    <div>
-      <div class="sidemenu-face">
-        <img src="img/h-title_after.gif">
-      </div>
-      <ul>
-        <li><a href="#">私について</a></li>
-        <li><a href="#">制作一覧</a></li>
-        <li><a href="#">日常と仕事のことをおとどけ</a></li>
-        <li><a href="#">お問い合わせ</a></li>
-      </ul>
+<button class="sidemenu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sidemenu">
+  <span class="sidebar ba1"></span>
+  <span class="sidebar ba1"></span>
+  <span class="sidebar ba1"></span>
+</button>
+<div class="sidemenu" id="sidemenu" aria-hidden="true">
+  <div>
+    <div class="sidemenu-face">
+      <img src="img/face.png">
     </div>
-    <small class="gray">@ishii keitaro portfolio</small>
+    <ul class="sidemenu-nav">
+      <li><a href="#about">私について</a></li>
+      <li><a href="#works">制作一覧</a></li>
+      <li><a href="#news">日常と仕事のことをおとどけ</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
   </div>
-</div> -->
-
-
-  
+  <small class="gray text-right">@ishii keitaro portfolio</small>
+</div>
 
   
 <header class="header-sect">
@@ -126,11 +125,6 @@
         <source srcset="img/single-logo.svg" media="(max-width: 768px)">
         <img src="img/header-logo.png">
       </picture>
-      <a href="#" class="sidemenu-btn">
-        <span class="sidebar ba1"></span>
-        <span class="sidebar ba1"></span>
-        <span class="sidebar ba1"></span>
-      </a>
     </div>
     <div class="text-slider_container">
       <ul class="text-slider">
@@ -153,7 +147,7 @@
   </div>
 </header>
 
-<section class="sect receipt-sect">
+<section class="sect receipt-sect" id="about">
   <div class="sect-inner">
     <h2 class="h-title h-title_margin "><span class="h-title_decoration">私について</span></h2>
     <div class="profile-receipt">
@@ -243,7 +237,7 @@
 </section>
 
 
-<section class="sect">
+<section class="sect" id="works">
   <div class="sect-inner">
     <h2 class="h-title h-title_margin "><span class="h-title_decoration">制作一覧</span></h2>
     <ul class="works-list">
@@ -611,7 +605,7 @@
 </section>
 
 
-<section class="sect news-sect">
+<section class="sect news-sect" id="news">
   <div class="sect-inner">
     <h2 class="h-title h-title_margin "><span class="h-title_decoration">日常と仕事のこととか</span></h2>
 
@@ -686,7 +680,7 @@
 </section>
 
 
-<footer class="sect footer-sect">
+<footer class="sect footer-sect" id="contact">
   <div class="sect-inner">
 
     <div class="footer-logo_container">
@@ -960,6 +954,34 @@ document.addEventListener('DOMContentLoaded', () => {
     init();
 
 });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".sidemenu-btn");
+    const menu = document.querySelector(".sidemenu");
+
+    if (!menuButton || !menu) return;
+
+    function setMenuOpen(isOpen) {
+      menu.classList.toggle("is-open", isOpen);
+      menuButton.classList.toggle("is-open", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+      menu.setAttribute("aria-hidden", String(!isOpen));
+      document.body.classList.toggle("menu-open", isOpen);
+    }
+
+    menuButton.addEventListener("click", () => {
+      setMenuOpen(menuButton.getAttribute("aria-expanded") !== "true");
+    });
+
+    menu.querySelectorAll("a[href^='#']").forEach((link) => {
+      link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    });
+  });
 
   
 </script>

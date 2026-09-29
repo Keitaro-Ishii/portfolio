@@ -97,7 +97,7 @@ small {
     position: fixed;
     right: 10px;
     bottom: 10px;
-    z-index: 100;
+    z-index: 9;
 }
 
 .back-top_btn {
@@ -161,8 +161,17 @@ small {
     }
 }
 .sidemenu-btn {
-    display: block;
-    padding: 0 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
 }
 
 .sidebar {
@@ -171,11 +180,79 @@ small {
     height: 2px;
     background-color: #fff;
     transition: 0.3s all ease;
-    margin: 3px 0;
+    margin: 2px 0;
+    transform-origin: center;
+}
+
+.sidemenu-btn.is-open .sidebar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.sidemenu-btn.is-open .sidebar:nth-child(2) {
+    opacity: 0;
+}
+
+.sidemenu-btn.is-open .sidebar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.sidemenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 100%;
+    height: 100dvh;
+    padding: 20px;
+    background-color: rgba(11, 10, 9, 0.87);
+    backdrop-filter: blur(13px) brightness(50%);
+    -webkit-backdrop-filter: blur(13px) brightness(50%);
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+}
+
+.sidemenu.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s;
+}
+
+.sect[id],
+.footer-sect[id] {
+    scroll-margin-top: 100px;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+.sidemenu-face {
+    max-width: 80px;
+}
+
+.sidemenu-nav {
+    margin-top: 50px;
+}
+
+.sidemenu-nav a {
+    display: inline-block;
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: bold;
+        font-family: momochidori-variable, sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 150, "wght" 800;
 }
 
 @media (min-width:769px) {
-    .sidebar {
+    .sidemenu-btn {
         display: none;
     }
 }
