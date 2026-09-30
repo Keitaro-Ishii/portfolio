@@ -12,6 +12,10 @@ body {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 a {
     transition: 0.3s all ease;
     display: block;
@@ -991,50 +995,123 @@ body.menu-open {
     height: 100dvh;
     display: flex;
     overflow: hidden;
-    z-index: 5;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s;
+}
+
+.modal.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 .modal-img_container {
     flex: 1 1 50%;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(11, 10, 9, 0.87);
+    backdrop-filter: blur(13px) brightness(50%);
+    -webkit-backdrop-filter: blur(13px) brightness(50%);
 }
 
 .modal-text_container {
     position: relative;
     flex: 1 1 50%;
     padding: 100px;
-    background-color: rgb(1 1 1 / 95%);
-    backdrop-filter: blur(10px);
+    background-color: rgba(11, 10, 9, 0.87);
+    backdrop-filter: blur(13px) brightness(50%);
+    -webkit-backdrop-filter: blur(13px) brightness(50%);
 }
 .modal-close {
     position: absolute;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: #E4F99F;
+    background-color: #ff5409;
     color: #0B0A09;
-    padding: 10px;
+    padding: 10px; 
+    gap: 10px;
+}
+
+.modal-close_text--container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.modal-close_text--track {
+    display: flex;
+    width: max-content;
+    animation: modalCloseTextFlow 20s linear infinite;
+}
+
+.modal-close_text--group {
+    display: flex;
+    flex-shrink: 0;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.modal-close_text--group {
+    display: flex;
+    flex-shrink: 0;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.modal-close_text--container img {
+    display: block;
+    width: 65px;
+    flex-shrink: 0;
+}
+
+@keyframes modalCloseTextFlow {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-close_text--track {
+        animation: none;
+    }
 }
 
 .modal-close_img--container {
     display: block;
     width: 20px;
     aspect-ratio: 1/1;
+    flex-shrink: 0;
+    position: relative;
 }
+
+
 
 .modal-text_title {
     font-size: 26px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .modal-text_explain {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .modal-hr {
     margin: 20px 0;
+    color: #A5A5A5;
 }
 
 .modal-subexplain {
@@ -1055,9 +1132,35 @@ body.menu-open {
 .modal-subexplain_content--link {
     display: inline-block;
     text-decoration: underline;
-    color: #E4F99F;
+    color: #ff5409;
 }
 
 .modal-subexplain_content--link i {
     margin-left: 5px;
+}
+
+@media (max-width:768px) {
+    .modal {
+        flex-direction: column;
+    }
+    .modal-text_container {
+        padding: 15px;
+        order: 1;
+    }
+    .modal-img_container {
+        order: 2;
+        padding: 15px;
+    }
+    .modal-text_title {
+        font-size: 20px;
+    }
+    .modal-text_explain {
+        font-size: 13px;
+    }
+    .modal-subexplain {
+        font-size: 12px;
+    }
+    .modal-close {
+        z-index: 2;
+    }
 }
