@@ -983,6 +983,11 @@ body.menu-open {
 }
 
 @media(max-width:768px) {
+    .footer-logo_container {
+        max-width: 205px;
+        margin: 15px 0;
+}
+
     .footer-nav_link {
         padding: 5px; 
         font-size: 12px;
