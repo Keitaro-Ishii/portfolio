@@ -1169,7 +1169,7 @@ body.modal-open {
         flex-direction: column;
     }
     .modal-close_text--track {
-        animation: modalCloseTextFlow 12s linear infinite;
+        animation: modalCloseTextFlow 6s linear infinite;
     }
     .modal-text_container {
         padding: 15px;
