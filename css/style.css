@@ -339,6 +339,13 @@ body.menu-open {
     flex-shrink: 0;
 }
 
+@media(hover: hover) {
+    .header-nav_link:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+
 @media (max-width:768px) {
     .header-nav_container {
         display: none;
@@ -1046,6 +1053,7 @@ body.modal-open {
     color: #0B0A09;
     padding: 10px; 
     gap: 10px;
+    transition: 0.3s all ease;
 }
 
 .modal-close_text--container {
@@ -1140,6 +1148,15 @@ body.modal-open {
 
 .modal-subexplain_content--link i {
     margin-left: 5px;
+}
+
+@media (hover: hover) {
+    .modal-subexplain_content--link:hover {
+        color: #ff4e00a1;
+    }
+    .modal-close:hover {
+        background-color: #00BAC7;
+    }
 }
 
 @media (max-width:768px) {
