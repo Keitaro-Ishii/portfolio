@@ -1067,7 +1067,7 @@ body.modal-open {
 .modal-close_text--track {
     display: flex;
     width: max-content;
-    animation: modalCloseTextFlow 20s linear infinite;
+    animation: modalCloseTextFlow 40s linear infinite;
 }
 
 .modal-close_text--group {
@@ -1162,6 +1162,9 @@ body.modal-open {
 @media (max-width:768px) {
     .modal {
         flex-direction: column;
+    }
+    .modal-close_text--track {
+        animation: modalCloseTextFlow 10s linear infinite;
     }
     .modal-text_container {
         padding: 15px;
