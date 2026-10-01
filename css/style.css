@@ -1019,6 +1019,11 @@ body.modal-open {
     background-color: rgba(11, 10, 9, 0.87);
     backdrop-filter: blur(13px) brightness(50%);
     -webkit-backdrop-filter: blur(13px) brightness(50%);
+    overflow-y: auto;
+}
+
+.modal-img_container::-webkit-scrollbar {
+    display: none;
 }
 
 .modal-text_container {
@@ -1097,8 +1102,6 @@ body.modal-open {
     position: relative;
 }
 
-
-
 .modal-text_title {
     font-size: 26px;
     font-weight: bold;
@@ -1146,10 +1149,13 @@ body.modal-open {
     .modal-text_container {
         padding: 15px;
         order: 1;
+        flex: 1 1 auto;
     }
     .modal-img_container {
         order: 2;
         padding: 15px;
+        flex: 1 1 auto;
+        margin-bottom: 40px;
     }
     .modal-text_title {
         font-size: 20px;
