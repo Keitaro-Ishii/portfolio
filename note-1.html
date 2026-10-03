@@ -33,6 +33,7 @@
 </head>
 
 <body>
+
    <div class="bg">
     <div class="noise"></div>
   </div>
@@ -153,6 +154,23 @@
       spMenu.classList.remove('is-active');
     });
   });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingScreen = document.getElementById("loading-screen");
+  if (!loadingScreen) return;
+
+  document.body.classList.add("is-loading");
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      loadingScreen.classList.add("is-hidden");
+      document.body.classList.remove("is-loading");
+      loadingScreen.setAttribute("aria-busy", "false");
+    }, 500);
+  });
+});
 </script>
 
 </body>
