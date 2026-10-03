@@ -887,6 +887,7 @@ body.menu-open {
     right: 10px;
     color: #FF5409;
     background-color: #0B0A09;
+    border: 1px solid #ff5409;
     width: 38px;
     height: 38px;
     display: flex;
@@ -897,7 +898,7 @@ body.menu-open {
 
 .news-title {
     color: #FF5409;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -935,7 +936,7 @@ body.menu-open {
 
 .bar {
     width: 20px;
-    height: 2px;
+    height: 3px;
     background-color: #010101;
     transition: background-color 0.3s ease;
 }
