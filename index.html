@@ -10,6 +10,7 @@
   <meta property="og:description" content="webデザイナーのイシイケイタロウのポートフォリオです">
   <meta property="og:image" content="https://keitaro-ishii.com/img/ogp.png">
   <meta property="og:url" content="https://keitaro-ishii.com/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/utility.css">
@@ -573,9 +574,9 @@
     <h2 class="h-title h-title_margin "><span class="h-title_decoration">日常と仕事のことをおとどけ
 </span></h2>
 
-    <div class="news-list_viewport">
-      <ul class="news-list">
-        <li>
+    <div class="news-list_viewport swiper">
+      <ul class="news-list swiper-wrapper">
+        <li class="swiper-slide">
           <a class="news-item">
             <div class="news-thumb_container">
               <span class="news-badge">#01</span>
@@ -593,7 +594,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class="swiper-slide">
           <a class="news-item">
             <div class="news-thumb_container">
               <span class="news-badge">#02</span>
@@ -611,7 +612,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class="swiper-slide">
           <a class="news-item">
             <div class="news-thumb_container">
               <span class="news-badge">#03</span>
@@ -631,7 +632,7 @@
         </li>
       </ul>
     </div>
-    <div class="news-list_bar">
+    <div class="news-list_bar" aria-hidden="true">
       <span class="bar active"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -982,6 +983,7 @@
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
  document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".text-slider");
@@ -1149,199 +1151,44 @@ document.addEventListener("DOMContentLoaded", () => {
   `${year}.${month}.${day} ${weekday}`;
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
-
-    const viewport = document.querySelector('.news-list_viewport');
-    const list = document.querySelector('.news-list');
-    const originalItems = [...document.querySelectorAll('.news-list li')];
+    const slider = document.querySelector('.news-list_viewport');
     const bars = document.querySelectorAll('.news-list_bar .bar');
 
-    if (!viewport || !list || originalItems.length === 0) return;
+    if (!slider || !window.Swiper) return;
 
-    const total = originalItems.length;
+    const wrapper = slider.querySelector('.swiper-wrapper');
+    if (!wrapper) return;
 
-    let currentIndex = total; // 真ん中のコピーからスタート
-    let timer;
-
-    // -------------------------
-    // liを複製
-    // -------------------------
-
-    const before = originalItems.map(item => item.cloneNode(true));
-    const after = originalItems.map(item => item.cloneNode(true));
-
-    before.reverse().forEach(item => {
-        list.insertBefore(item, list.firstChild);
+    [...wrapper.children].forEach((slide) => {
+      wrapper.appendChild(slide.cloneNode(true));
     });
 
-    after.forEach(item => {
-        list.appendChild(item);
-    });
-
-    const items = [...list.querySelectorAll('li')];
-
-
-    // -------------------------
-    // 左右の余白
-    // -------------------------
-
-    function setSidePadding() {
-
-        const viewportWidth = viewport.clientWidth;
-        const itemWidth = items[0].offsetWidth;
-
-        const padding = Math.max(
-            0,
-            (viewportWidth - itemWidth) / 2
-        );
-
-        list.style.paddingLeft = `${padding}px`;
-        list.style.paddingRight = `${padding}px`;
-    }
-
-
-    // -------------------------
-    // スライド位置
-    // -------------------------
-
-    function getPosition(index) {
-
-        const item = items[index];
-
-        return (
-            item.offsetLeft -
-            (viewport.clientWidth - item.offsetWidth) / 2
-        );
-    }
-
-
-    // -------------------------
-    // バー更新
-    // -------------------------
-
-    function updateBar() {
-
-        const realIndex = currentIndex % total;
-
-        bars.forEach((bar, index) => {
-
-            bar.classList.toggle(
-                'active',
-                index === realIndex
-            );
-
-        });
-    }
-
-
-    // -------------------------
-    // スライド
-    // -------------------------
-
-    function slideTo(index, smooth = true) {
-
-        currentIndex = index;
-
-        viewport.scrollTo({
-            left: getPosition(currentIndex),
-            behavior: smooth ? 'smooth' : 'auto'
-        });
-
-        updateBar();
-    }
-
-
-    // -------------------------
-    // 次へ
-    // -------------------------
-
-    function nextSlide() {
-
-        currentIndex++;
-
-        slideTo(currentIndex);
-
-        /*
-         * 真ん中のコピーが終わったら
-         * アニメーション終了後に
-         * 同じ位置のコピーへ瞬間移動
-         */
-        if (currentIndex >= total * 2) {
-
-            setTimeout(() => {
-
-                currentIndex = total;
-
-                viewport.scrollTo({
-                    left: getPosition(currentIndex),
-                    behavior: 'auto'
-                });
-
-                updateBar();
-
-            }, 500);
+    new Swiper(slider, {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+      spaceBetween: 0,
+        loop: true,
+        autoplay: {
+        delay: 3000,
+            disableOnInteraction: false
+        },
+      breakpoints: {
+        769: {
+          spaceBetween: 30
         }
-    }
-
-
-    // -------------------------
-    // 自動再生
-    // -------------------------
-
-    function startSlider() {
-
-        clearInterval(timer);
-
-        timer = setInterval(() => {
-            nextSlide();
-        }, 5000);
-    }
-
-
-    // -------------------------
-    // 初期化
-    // -------------------------
-
-    function init() {
-
-        setSidePadding();
-
-        // 2枚目を中央にする
-        currentIndex = total + 1;
-
-        viewport.scrollTo({
-            left: getPosition(currentIndex),
-            behavior: 'auto'
-        });
-
-        updateBar();
-
-        startSlider();
-    }
-
-
-    // -------------------------
-    // リサイズ
-    // -------------------------
-
-    window.addEventListener('resize', () => {
-
-        setSidePadding();
-
-        viewport.scrollTo({
-            left: getPosition(currentIndex),
-            behavior: 'auto'
-        });
-
+      },
+        on: {
+            slideChange(swiper) {
+                bars.forEach((bar, index) => {
+                bar.classList.toggle('active', index === swiper.realIndex % bars.length);
+                });
+            }
+        }
     });
-
-
-    init();
-
 });
 
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.querySelector(".sidemenu-btn");
     const menu = document.querySelector(".sidemenu");
 
