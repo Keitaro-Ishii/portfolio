@@ -1085,6 +1085,7 @@ body.menu-open {
     }
     .news-title {
         margin-bottom: 6px;
+        font-size: 15px;
     }
     .news-explain {
         font-size: 11px;
