@@ -71,8 +71,8 @@ body::-webkit-scrollbar {
 
 .loading-screen__text {
     font-size: 9px;
-    letter-spacing: 0.35em;
-    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.3em;
+    color: #A5A5A5;
     text-transform: uppercase;
 }
 
