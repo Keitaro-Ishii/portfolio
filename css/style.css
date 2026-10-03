@@ -79,15 +79,22 @@ small {
         margin: 20px 0;
         padding: 30px 10px;
     }
+
+    #works {
+        padding: 30px 20px;
+    }
+
     .receipt-sect {
         margin-top: 0;
         padding: 30px 20px;
 
     }
+
     .news-sect {
         margin-bottom: 0;
         padding: 35px 10px;
     }
+
     .footer-sect {
         margin: 0;
         padding: 25px 10px 65px;
@@ -118,6 +125,7 @@ small {
     top: 17px;
     left: 17px;
     z-index: 2;
+    transition: 0.3s all ease;
 }
 
 .back-top_face {
@@ -152,8 +160,7 @@ small {
 
 @media (hover: hover) {
     .back-top_btn:hover {
-        background-color: #0B0A09;
-        border-color: #fff;
+        background-color: #FF5409;
     }
 }
 @media (max-width:768px) {
@@ -589,7 +596,7 @@ body.menu-open {
     }
     .work-soundbar {
         max-width: 30px;
-        margin-top: 50px;
+        margin-top: 20px;
     }
     .work-decoration_container {
         max-width: 45px;
@@ -629,7 +636,7 @@ body.menu-open {
     position: absolute;
     top: 10px; left: 10px;
     font-size: 13px;
-    color: #A5A5A5;
+    color: #9D9D9D;
 }
 
 .receipt-date {
@@ -639,11 +646,11 @@ body.menu-open {
     position: absolute;
     top: 10px; right: 10px;
     font-size: 13px;
-    color: #A5A5A5;
+    color: #9D9D9D;
 }
 
 .receipt-title {
-    max-width: 184px;
+    max-width: 145px;
     margin: 0 auto;
 }
 
@@ -653,7 +660,7 @@ body.menu-open {
 
 .receipt-profile_img {
     position: relative;
-    max-width: 210px;
+    max-width: 200px;
     margin: 0 auto 20px;
 }
 
@@ -797,8 +804,15 @@ body.menu-open {
         align-items: flex-start;
         gap: 6px;
     }
+    .receipt-profile_name {
+        font-size: 15px;
+    }
     .receipt-me_skill--content {
         text-align: left;
+    }
+    .receipt-me_skill--title i {
+        width: 27px;
+        font-size: 14px;
     }
 
 }
@@ -982,15 +996,22 @@ body.menu-open {
     padding-left: 10px;
 }
 
+@media (hover: hover) {
+    .footer-nav_link:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+
 @media(max-width:768px) {
     .footer-logo_container {
-        max-width: 205px;
+        max-width: 190px;
         margin: 15px 0;
 }
 
     .footer-nav_link {
         padding: 5px; 
-        font-size: 12px;
+        font-size: 11px;
     }
     .footer-sect small {
         padding-left: 5px;
