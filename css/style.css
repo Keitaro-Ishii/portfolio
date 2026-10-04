@@ -1189,6 +1189,29 @@ body.modal-open {
     display: none;
 }
 
+.modal-guide_container {
+    /* background-color: #FF5409; なんかいい感じのオレンジ*/
+    background-color: #0B0A09;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: opacity 0.25s ease;
+}
+
+.modal-img_container.is-scrolled .modal-guide_container {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-guide_container img {
+    max-width: 170px;
+}
+
 .modal-text_container {
     position: relative;
     flex: 1 1 50%;

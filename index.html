@@ -676,6 +676,9 @@
 
 <div class="modal">
   <div class="modal-img_container">
+    <div class="modal-guide_container">
+      <img src="img/modal-scrolldown.svg">
+    </div>
     <img src="img/modal-works-01.jpg">
   </div>
   <div class="modal-text_container">
@@ -719,6 +722,9 @@
 
 <div class="modal">
   <div class="modal-img_container">
+    <div class="modal-guide_container">
+      <img src="img/modal-scrolldown.svg">
+    </div>
     <img src="img/modal-works-02.png">
   </div>
   <div class="modal-text_container">
@@ -766,6 +772,9 @@
 
 <div class="modal">
   <div class="modal-img_container">
+    <div class="modal-guide_container">
+      <img src="img/modal-scrolldown.svg">
+    </div>
     <img src="img/modal-works-03.png">
   </div>
   <div class="modal-text_container">
@@ -813,6 +822,9 @@
 
 <div class="modal">
   <div class="modal-img_container">
+    <div class="modal-guide_container">
+      <img src="img/modal-scrolldown.svg">
+    </div>
     <img src="img/modal-works-04.png">
   </div>
   <div class="modal-text_container">
@@ -860,6 +872,9 @@
 
 <div class="modal">
   <div class="modal-img_container">
+    <div class="modal-guide_container">
+      <img src="img/modal-scrolldown.svg">
+    </div>
     <img src="img/modal-works-05.png">
   </div>
   <div class="modal-text_container">
@@ -905,6 +920,9 @@
 
 <div class="modal">
   <div class="modal-img_container">
+    <div class="modal-guide_container">
+      <img src="img/modal-scrolldown.svg">
+    </div>
     <img src="img/modal-works-06.png">
   </div>
   <div class="modal-text_container">
@@ -950,6 +968,9 @@
 
 <div class="modal">
   <div class="modal-img_container">
+    <div class="modal-guide_container">
+      <img src="img/modal-scrolldown.svg">
+    </div>
     <img src="img/modal-works-07.png">
   </div>
   <div class="modal-text_container">
@@ -1087,6 +1108,11 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.setAttribute("role", "dialog");
     modal.setAttribute("aria-modal", "true");
     modal.setAttribute("aria-hidden", "true");
+
+    const imageContainer = modal.querySelector(".modal-img_container");
+    imageContainer?.addEventListener("scroll", () => {
+      imageContainer.classList.toggle("is-scrolled", imageContainer.scrollTop > 0);
+    }, { passive: true });
 
     const title = modal.querySelector(".modal-text_title");
     if (title) {
