@@ -1111,7 +1111,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const imageContainer = modal.querySelector(".modal-img_container");
     imageContainer?.addEventListener("scroll", () => {
-      imageContainer.classList.toggle("is-scrolled", imageContainer.scrollTop > 0);
+      if (imageContainer.scrollTop > 0) {
+        imageContainer.classList.add("is-scrolled");
+      }
     }, { passive: true });
 
     const title = modal.querySelector(".modal-text_title");

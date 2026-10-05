@@ -1192,7 +1192,7 @@ body.modal-open {
 .modal-guide_container {
     /* background-color: #FF5409; なんかいい感じのオレンジ*/
     background-color: #0B0A09;
-    padding: 10px;
+    padding: 12px 18px;
     display: flex;
     justify-content: center;
     align-items: center;
