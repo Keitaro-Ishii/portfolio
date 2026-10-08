@@ -1185,10 +1185,10 @@ body.menu-open {
 
 @keyframes modal-power-on {
     0% {
-        transform: scaleY(0.003);
+        transform: scaleY(0.005);
     }
     80% {
-        transform: scaleY(0.003);
+        transform: scaleY(0.005);
     }
     100% {
         transform: scaleY(1);
