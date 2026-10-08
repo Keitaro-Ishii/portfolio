@@ -21,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="icon" href="img/favicon.png" type="image/png">
+
   <script>
   (function(d) {
     var config = {
@@ -35,45 +36,84 @@
 
 <body>
 
-   <div class="bg">
-    <div class="noise"></div>
+<div class="back-top">
+  <a href="#" class="back-top_btn">
+    <img class="back-top_face" src="img/h-title_after.gif">
+  </a>
+  <svg class="back-top_text" viewBox="0 0 100 100">
+    <defs>
+      <path
+        id="back-top_circle"
+        d="M 50,50
+           m -42,0
+           a 42,42 0 1,1 84,0
+           a 42,42 0 1,1 -84,0"
+        />
+    </defs>
+    <text>
+      <textPath href="#back-top_circle" startOffset="0%">
+        BACK TO TOP
+      </textPath>
+
+      <textPath href="#back-top_circle" startOffset="50%">
+        BACK TO TOP
+      </textPath>
+    </text>
+  </svg>
+</div>
+
+<button class="sidemenu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="sidemenu">
+  <span class="sidebar ba1"></span>
+  <span class="sidebar ba1"></span>
+  <span class="sidebar ba1"></span>
+</button>
+<div class="sidemenu" id="sidemenu" aria-hidden="true">
+  <div>
+    <div class="sidemenu-face">
+      <img src="img/face.png">
+    </div>
+    <ul class="sidemenu-nav">
+      <li><a href="#about">私について</a></li>
+      <li><a href="#works">制作一覧</a></li>
+      <li><a href="#news">日常と仕事のことをおとどけ</a></li>
+      <li><a href="https://forms.gle/XymYTzAseJJ3Smz17" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+    </ul>
   </div>
+  <small class="gray text-right">@ishii keitaro portfolio</small>
+</div>
 
-  <header>
-    <div class="header-container">
-
-      <div class="header-logo">
-        <a href="index.html">
-          <img src="img/logo.svg" alt="logo">
-        </a>
-      </div>
-      <ul class="header-menu">
-        <li><a class="header-menu__list" href="index.html#profile">PROFILE</a></li>
-        <li><a class="header-menu__list" href="index.html#work">WORKS</a></li>
-        <li><a class="header-menu__list" href="index.html#note">NOTE</a></li>
-        <li><a class="header-menu__list last" a href="https://forms.gle/XymYTzAseJJ3Smz17" target="_blank">お問い合わせはこちら</a></li>
+  
+<header class="header-sect">
+  <div class="header-inner">
+    <div class="header-logo_container">
+      <picture>
+        <source srcset="img/single-logo.svg" media="(max-width: 768px)">
+        <img src="img/header-logo.png">
+      </picture>
+    </div>
+    <div class="text-slider_container">
+      <ul class="text-slider">
+        <li><img class="header-slider_text" src="/img/header-slider-text.svg"></li>
       </ul>
-
-      <div class="menu-icon">
-        <span class="bar"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
+      <div class="header-slider_icon--container">
+        <img src="/img/h-title_after.gif">
       </div>
     </div>
+    <div class="header-nav_container">
+      <nav>
+        <ul class="header-nav">
+          <li><a href="index.html#about" class="header-nav_link">私について</a></li>
+          <li><a href="index.html#works" class="header-nav_link">制作一覧</a></li>
+          <li><a href="index.html#news" class="header-nav_link">日常と仕事のことをおとどけ</a></li>
+          <li><a href="https://forms.gle/XymYTzAseJJ3Smz17" class="header-nav_link" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 
-    <nav class="sp-menu">
-      <ul class="sp-menu_list">
-        <li><a class="sp-menu_list--link" href="index.html#profile">PROFILE<span> / プロフィール</span></a></li>
-        <li><a class="sp-menu_list--link" href="index.html#work">WORKS<span> / 制作一覧</span></a></li>
-        <li><a class="sp-menu_list--link" href="index.html#note">NOTE<span> / 仕事と日常のこと</span></a></li>
-      </ul>
-      <a class="sp-menu_list--link mail" href="https://forms.gle/XymYTzAseJJ3Smz17" target="_blank">お問い合わせはこちら</a>
-    </nav>
-
-  </header>
-
-  <section class="sect">
-    <div class="container note-detail-container">
+  <section class="sect note-sect">
+    <div class="sect-inner">
 
       <span class="note-detail_date">2025.12.27</span>
       <div class="note-detail_title--container">
@@ -135,42 +175,67 @@
     </div>
   </section>
 
-  <footer>
-    <small>@ ishii keitaro Portfolio</small>
+  <footer class="sect footer-sect" id="contact">
+    <div class="sect-inner">
+
+      <div class="footer-logo_container">
+        <img src="img/single-logo.svg">
+      </div>
+      <nav>
+        <ul class="footer-nav">
+          <li><a href="index.html#about" class="footer-nav_link">私について</a></li>
+          <li><a href="index.html#works" class="footer-nav_link ">制作一覧</a></li>
+          <li><a href="index.html#news" class="footer-nav_link ">日常と仕事のことをおとどけ</a></li>
+          <li><a href="https://forms.gle/XymYTzAseJJ3Smz17" class="footer-nav_link" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <small class="gray">@ishii keitaro portfolio</small>
+    </div>
   </footer>
 
 <script>
-  const menuIcon = document.querySelector('.menu-icon');
-  const spMenu = document.querySelector('.sp-menu');
-  const spMenuLinks = document.querySelectorAll('.sp-menu_list--link');
+ document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".text-slider");
 
-  menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('is-active');
-    spMenu.classList.toggle('is-active');
-  });
+  if (!slider) return;
 
-  spMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuIcon.classList.remove('is-active');
-      spMenu.classList.remove('is-active');
+  const originalItem = slider.querySelector("li");
+
+  // 一旦中身を空にする
+  slider.innerHTML = "";
+
+  // 画面幅の2倍以上になるまで複製
+  do {
+    slider.appendChild(originalItem.cloneNode(true));
+  } while (slider.scrollWidth < window.innerWidth * 2);
+
+  let position = 0;
+
+  // 1回で動く距離
+  const step = 8;
+
+  // 更新間隔
+  const interval = 300;
+
+  function move() {
+    position -= step;
+
+    const firstItem = slider.children[0];
+    const itemWidth = firstItem.offsetWidth;
+
+    // 1つ分移動したら先頭のLIを最後に移動
+    if (-position >= itemWidth) {
+      position += itemWidth;
+      slider.appendChild(firstItem);
+    }
+
+    // ULではなく、それぞれのLIを動かす
+    Array.from(slider.children).forEach((item) => {
+      item.style.transform = `translate3d(${Math.round(position)}px, 0, 0)`;
     });
-  });
-</script>
+  }
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const loadingScreen = document.getElementById("loading-screen");
-  if (!loadingScreen) return;
-
-  document.body.classList.add("is-loading");
-
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      loadingScreen.classList.add("is-hidden");
-      document.body.classList.remove("is-loading");
-      loadingScreen.setAttribute("aria-busy", "false");
-    }, 500);
-  });
+  setInterval(move, interval);
 });
 </script>
 
