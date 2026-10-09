@@ -98,6 +98,12 @@ body::-webkit-scrollbar {
     }
 }
 
+@media (max-width: 768px) { 
+    .loading-screen__text {
+        max-width: 71px;
+    }
+}
+
 a {
     transition: 0.3s all ease;
     display: block;
