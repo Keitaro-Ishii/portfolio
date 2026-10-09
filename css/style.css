@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .loading-screen__motion {
@@ -50,6 +50,7 @@ body::-webkit-scrollbar {
     height: 60px;
     overflow: hidden;
     opacity: 0.9;
+    margin-bottom: 10px;
 }
 
 .loading-screen__face {
@@ -70,10 +71,7 @@ body::-webkit-scrollbar {
 }
 
 .loading-screen__text {
-    font-size: 9px;
-    letter-spacing: 0.3em;
-    color: #A5A5A5;
-    text-transform: uppercase;
+    max-width: 81px;
 }
 
 @keyframes face-flow {
