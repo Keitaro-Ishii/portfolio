@@ -1179,8 +1179,10 @@ body.menu-open {
         height: 38px;
         background-color: #fff;
     }
+    .note-detail_title {
+        font-size: 15px;
+    }
 }
-
 
 
 
