@@ -1119,12 +1119,43 @@ body.menu-open {
     }
 }
 
+.note-sect .news-badge {
+    position: initial;
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+}
+
+.back-link_container {
+    margin: 0 0 20px;
+}
+
+.back-link {
+    font-size: 12px;
+    color: #FF5409;
+}
+
+.note-detail_title--container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.note-detail_title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #FF5409;
+}
+
+
 .note-detail_text {
     font-size: 14px;
     line-height: 1.6;
     letter-spacing: 0.02em;
     margin-bottom: 20px;
 }
+
+
 
 
 /* フッター */
