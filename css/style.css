@@ -1107,11 +1107,11 @@ body.menu-open {
         transform: translate(50%, -50%);
     }
     .news-title {
-        margin-bottom: 6px;
+        margin-bottom: 10px;
         font-size: 15px;
     }
     .news-explain {
-        font-size: 11px;
+        font-size: 13px;
         -webkit-line-clamp: 6;
     }
     .news-date {
