@@ -857,7 +857,7 @@ body.menu-open {
 
 .receipt-logo_container {
     max-width: 200px;
-    margin: 0 auto;
+    margin: 0 auto 5px;
 }
 
 .receipt-logo_container img {
@@ -898,7 +898,6 @@ body.menu-open {
     }
     .receipt-logo_container {
         max-width: 190px;
-        margin: 0 auto 5px;
     }
     .receipt-me_list {
         gap: 15px;
