@@ -146,10 +146,12 @@ small {
 
 .header-sect {
     width: 100%;
-    padding: 20px 10px;
+    padding: 16px 10px;
     margin: 0 auto;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-    background-color: #0B0A09;
+    background-color: rgba(11, 10, 9, 0.67);
+    backdrop-filter: blur(13px) brightness(50%);
+    -webkit-backdrop-filter: blur(13px) brightness(50%);
     position: sticky;
     inset: 0;
     z-index: 5;
@@ -381,7 +383,7 @@ body.menu-open {
 }
 
 .header-logo_container {
-    max-width: 350px;
+    max-width: 280px;
 }
 
 .header-nav_container {
@@ -460,10 +462,9 @@ body.menu-open {
         display: none;
     }
     .header-logo_container {
-        max-width: 100%;
+        max-width: 205px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
     }
     .header-inner {
         flex-direction: column;
@@ -1137,7 +1138,7 @@ body.menu-open {
 
 .back-link {
     font-size: 12px;
-    color: #FF5409;
+    color: #969696;
     display: inline-block;
 }
 
@@ -1163,12 +1164,30 @@ body.menu-open {
 
 .note-detail_img--container {
     margin: 20px 0;
+    text-align: center;
+}
+
+.note-detail_img--link {
+    font-size: 13px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px auto;
+    color: #FF5409;
+}
+
+.note-detail_img--link i{
+    font-size: 11px;
+    margin-left: 5px;
 }
 
 @media (hover: hover) {
     .back-link:hover {
         text-decoration: underline;
         text-underline-offset: 4px;
+    }
+    .note-detail_img--link:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
     }
 }
 
